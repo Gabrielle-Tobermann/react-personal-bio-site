@@ -1,23 +1,24 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-export default function routes() {
+export default function Routes() {
   return (
     <div>
       <Switch>
-        <Route 
+        <Route exact path='/'/>
+        <Route
         exact path='/projects'
         />
-         <Route 
+         <Route
         exact path='/bio'
         />
-         <Route 
+         <Route
         exact path='/technologies'
         />
-        <Route 
+        <Route
         exact path='/contact'
         />
       </Switch>
     </div>
-  )
-};
+  );
+}
