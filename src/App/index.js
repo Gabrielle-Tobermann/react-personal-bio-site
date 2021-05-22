@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import firebase from 'firebase';
-import 'firebase/auth';
 import { BrowserRouter as Router } from 'react-router-dom';
-import firebaseConfig from '../helpers/apiKeys';
 import NavBar from '../components/NavBar';
 import Routes from '../helpers/routes';
 import './App.scss';
-
-firebase.initializeApp(firebaseConfig);
 
 function App() {
   const [user, setUser] = useState(null);
