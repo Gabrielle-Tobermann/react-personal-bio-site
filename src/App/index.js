@@ -28,7 +28,6 @@ function App() {
     <div className='App'>
       <Router>
         <NavBar
-        // user={user}
         />
         <Routes/>
       </Router>

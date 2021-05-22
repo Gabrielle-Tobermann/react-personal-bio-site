@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Bio from '../components/Bio';
 import Contact from '../components/Contact';
+import EditProjects from '../components/EditProjects';
 import Home from '../components/Home';
 import Technologies from '../components/Technologies';
 
@@ -25,6 +26,10 @@ export default function Routes() {
         <Route
         exact path='/contact'
         component={Contact}
+        />
+        <Route
+        exact path='/edit-projects'
+        component={EditProjects}
         />
       </Switch>
     </div>

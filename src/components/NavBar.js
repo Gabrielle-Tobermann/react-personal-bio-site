@@ -34,6 +34,9 @@ const NavBar = ({ user }) => {
             <NavItem>
               <Link className="nav-link"to='/contact'>CONTACT INFORMATION</Link>
             </NavItem>
+            <NavItem>
+              <Link className="nav-link"to='/edit-projects'>EDIT PORJECT</Link>
+            </NavItem>
           </Nav>
           <NavItem>
           {
