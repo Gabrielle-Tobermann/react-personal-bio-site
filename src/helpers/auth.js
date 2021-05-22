@@ -1,5 +1,5 @@
 // src/helpers/auth.js
-import firebase from 'firebase/app';
+import firebase from 'firebase';
 
 const signInUser = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
