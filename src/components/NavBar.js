@@ -34,9 +34,12 @@ const NavBar = ({ admin }) => {
             <NavItem>
               <Link className="nav-link"to='/contact'>CONTACT INFORMATION</Link>
             </NavItem>
-            <NavItem>
+            {
+              admin ? <NavItem>
               <Link className="nav-link"to='/edit-projects'>EDIT PORJECT</Link>
             </NavItem>
+                : ''
+            }
           </Nav>
           {
             admin ? <Button onClick={signOutUser}>Sign Out</Button>
