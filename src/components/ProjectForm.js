@@ -41,31 +41,31 @@ function ProjectForm({
          <Form>
       <FormGroup>
         <Label for="description">Description</Label>
-        <Input type="text" name="description" id="description" value={description} onChange={handleInputChange}/>
+        <Input type="text" name="description" id="description" value={project.description} onChange={handleInputChange}/>
       </FormGroup>
       <FormGroup>
         <Label for="githubUrl">Github Link</Label>
-        <Input type="url" name="githubUrl" id="githubUrl" value={githubUrl} onChange={handleInputChange}/>
+        <Input type="url" name="githubUrl" id="githubUrl" value={project.githubUrl} onChange={handleInputChange}/>
       </FormGroup>
       <FormGroup>
         <Label for="screenshot">Screenshot</Label>
-        <Input type="url" name="screenshot" id="screenshot" value={screenshot} onChange={handleInputChange}/>
+        <Input type="url" name="screenshot" id="screenshot" value={project.screenshot} onChange={handleInputChange}/>
       </FormGroup>
       <FormGroup>
         <Label for="technologies">Technologies Used</Label>
-        <Input type="text" name="technologiesUsed" id="technologiesUsed" value={technologiesUsed} onChange={handleInputChange}/>
+        <Input type="text" name="technologiesUsed" id="technologiesUsed" value={project.technologiesUsed} onChange={handleInputChange}/>
       </FormGroup>
       <FormGroup>
         <Label for="title">Title</Label>
-        <Input type="text" name="title" id="title" value={title} onChange={handleInputChange}/>
+        <Input type="text" name="title" id="title" value={project.title} onChange={handleInputChange}/>
       </FormGroup>
       <FormGroup>
         <Label for="url">Deployed Link</Label>
-        <Input type="url" name="url" id="url" value={url} onChange={handleInputChange}/>
+        <Input type="url" name="url" id="url" value={project.url} onChange={handleInputChange}/>
       </FormGroup>
       <FormGroup check>
         <Label check>
-          <Input name="available" type="checkbox" value={available} onChange={handleInputChange}/>
+          <Input name="available" type="checkbox" value={project.available} onChange={handleInputChange}/>
           Available
         </Label>
       </FormGroup>
