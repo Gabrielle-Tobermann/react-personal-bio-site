@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {
   Button, Card, CardTitle, CardText
 } from 'reactstrap';
+import { deleteProject } from '../helpers/data/projectsData';
 
 function ProjectUpdateCards({
   title,
@@ -12,7 +13,13 @@ function ProjectUpdateCards({
   githubUrl,
   technologiesUsed,
   available,
+  firebaseKey,
+  setProjects
 }) {
+  const handleDelete = () => {
+    deleteProject(firebaseKey).then((resp) => setProjects(resp));
+  };
+
   return (
     <div>
       <Card body>
@@ -23,7 +30,7 @@ function ProjectUpdateCards({
         <CardText>{technologiesUsed}</CardText>
         <CardText>{screenshot}</CardText>
         <CardText>{available}</CardText>
-        <Button>Go somewhere</Button>
+        <Button onClick={handleDelete}>Delete {title}</Button>
       </Card>
     <div>
     </div>
@@ -39,6 +46,8 @@ ProjectUpdateCards.propTypes = {
   screenshot: PropTypes.string,
   available: PropTypes.bool,
   technologiesUsed: PropTypes.string,
+  firebaseKey: PropTypes.string,
+  setProjects: PropTypes.func
 };
 
 export default ProjectUpdateCards;

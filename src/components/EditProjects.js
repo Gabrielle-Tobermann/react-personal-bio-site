@@ -31,6 +31,8 @@ export default function EditProjects() {
                       available={item.available}
                       handleUpdateChange={item.handleUpdateChange}
                       handleUpdateClick={item.handleUpdateClick}
+                      firebaseKey={item.firebaseKey}
+                      setProjects={setProjects}
                       />
                     </div>
                     <ProjectForm

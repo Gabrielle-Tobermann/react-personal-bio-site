@@ -27,10 +27,9 @@ function ProjectForm({
   };
 
   const handleClick = (e) => {
-    console.warn(project);
     e.preventDefault();
     if (project.firebaseKey) {
-      updateProject(project).then((response) => console.warn(response));
+      updateProject(project).then((response) => setProjects(response));
     } else {
       createProject(project).then((response) => setProjects(response));
     }
