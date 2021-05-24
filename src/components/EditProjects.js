@@ -1,69 +1,52 @@
 import React, { useEffect, useState } from 'react';
-import {
-  Button, Form, FormGroup, Label, Input
-} from 'reactstrap';
-import { createProject, getProjects } from '../helpers/data/projectsData';
+import { getProjects } from '../helpers/data/projectsData';
+import ProjectUpdateCards from './ProjectUpdateCards';
+import ProjectForm from './ProjectForm';
 
 export default function EditProjects() {
-  const [project, setProject] = useState({
-    title: '',
-    description: '',
-    screenshot: '',
-    url: '',
-    githubUrl: '',
-    technologiesUsed: '',
-    available: false
-  });
+  const [projects, setProjects] = useState([]);
   useEffect(() => {
-    getProjects().then((resp) => console.warn(resp));
+    getProjects().then((resp) => setProjects(resp));
   }, []);
-
-  const handleInputChange = (e) => {
-    setProject((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.name === 'available' ? e.target.checked : e.target.value
-    }));
-  };
-  const handleClick = (e) => {
-    e.preventDefault();
-    createProject(project).then((response) => console.warn(response));
-  };
 
   return (
     <div>
-      <Form>
-      <FormGroup>
-        <Label for="sescription">Description</Label>
-        <Input type="text" name="description" id="description" onChange={handleInputChange}/>
-      </FormGroup>
-      <FormGroup>
-        <Label for="githubUrl">Github Link</Label>
-        <Input type="url" name="githubUrl" id="githubUrl" onChange={handleInputChange}/>
-      </FormGroup>
-      <FormGroup>
-        <Label for="screenshot">Screenshot</Label>
-        <Input type="url" name="screenshot" id="screenshot" onChange={handleInputChange}/>
-      </FormGroup>
-      <FormGroup>
-        <Label for="technologies">Technologies Used</Label>
-        <Input type="text" name="technologiesUsed" id="technologiesUsed" onChange={handleInputChange}/>
-      </FormGroup>
-      <FormGroup>
-        <Label for="title">Title</Label>
-        <Input type="text" name="title" id="title" onChange={handleInputChange}/>
-      </FormGroup>
-      <FormGroup>
-        <Label for="url">Deployed Link</Label>
-        <Input type="url" name="url" id="url" onChange={handleInputChange}/>
-      </FormGroup>
-      <FormGroup check>
-        <Label check>
-          <Input name="available" type="checkbox" onChange={handleInputChange}/>
-          Available
-        </Label>
-      </FormGroup>
-      <Button type='submit' onClick={handleClick}>Submit</Button>
-      </Form>
-    </div>
+      <div>
+          <ProjectForm
+          setProjects={setProjects}
+          />
+      </div>
+      <div>
+             {
+                projects.map((item, i) => (
+                  <div key={i}>
+                    <div>
+                      <ProjectUpdateCards
+                      title={item.title}
+                      description={item.description}
+                      screenshot={item.screenshot}
+                      url={item.url}
+                      githubUrl={item.githubUrl}
+                      technologiesUsed={item.technologiesUsed}
+                      available={item.available}
+                      handleUpdateChange={item.handleUpdateChange}
+                      handleUpdateClick={item.handleUpdateClick}
+                      />
+                    </div>
+                    <ProjectForm
+                    setProjects={setProjects}
+                    title={item.title}
+                    description={item.description}
+                    screenshot={item.screenshot}
+                    url={item.url}
+                    githubUrl={item.githubUrl}
+                    technologiesUsed={item.technologiesUsed}
+                    firebaseKey={item.firebaseKey}
+                    />
+                </div>
+                ))
+             }
+             </div>
+          </div>
   );
 }
