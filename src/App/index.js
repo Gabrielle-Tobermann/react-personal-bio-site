@@ -6,31 +6,48 @@ import Routes from '../helpers/routes';
 import './App.scss';
 
 function App() {
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
+
+  // useEffect(() => {
+  //   firebase.auth().onAuthStateChanged((authed) => {
+  //     if (authed) {
+  //       const userObj = {
+  //         fullName: authed.displayName,
+  //         profileImage: authed.photoURL,
+  //         uid: authed.uid,
+  //         user: authed.email.split('@')[0]
+  //       };
+  //       setUser(userObj);
+  //     } else if (user || user === null) {
+  //       setUser(false);
+  //     }
+  //   });
+  // }, []);
+
+  const [admin, setAdmin] = useState(null);
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((authed) => {
-      if (authed) {
-        const userObj = {
-          fullName: authed.displayName,
-          profileImage: authed.photoURL,
-          uid: authed.uid,
-          user: authed.email.split('@')[0]
-        };
-        setUser(userObj);
-      } else if (user || user === null) {
-        setUser(false);
+      if (authed && (authed.uid === process.env.REACT_APP_ADMIN_UID)) {
+        setAdmin(true);
+        console.warn('signed in');
+      } else if (admin || admin === null) {
+        setAdmin(false);
       }
     });
   }, []);
+
+  console.warn(admin);
 
   return (
     <div className='App'>
       <Router>
         <NavBar
-        // user={user}
+        admin={admin}
         />
-        <Routes/>
+        <Routes
+        admin={admin}
+        />
       </Router>
     </div>
   );
