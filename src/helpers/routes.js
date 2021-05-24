@@ -1,12 +1,14 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Bio from '../components/Bio';
 import Contact from '../components/Contact';
 import EditProjects from '../components/EditProjects';
 import Home from '../components/Home';
+import Login from '../components/Login';
 import Technologies from '../components/Technologies';
 
-export default function Routes() {
+function Routes({ admin }) {
   return (
     <div>
       <Switch>
@@ -31,7 +33,18 @@ export default function Routes() {
         exact path='/edit-projects'
         component={EditProjects}
         />
+        <Route
+        exact path='/login'
+        component={() => <Login admin={admin}/>}
+        admin={admin}
+        />
       </Switch>
     </div>
   );
 }
+
+Routes.propTypes = {
+  admin: PropTypes.bool
+};
+
+export default Routes;
