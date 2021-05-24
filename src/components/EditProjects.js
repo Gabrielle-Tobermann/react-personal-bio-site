@@ -23,10 +23,9 @@ export default function EditProjects() {
       ...prevState,
       [e.target.name]: e.target.name === 'available' ? e.target.checked : e.target.value
     }));
-    console.warn(project);
   };
   const handleClick = (e) => {
-    e.preventdefault();
+    e.preventDefault();
     createProject(project).then((response) => console.warn(response));
   };
 
