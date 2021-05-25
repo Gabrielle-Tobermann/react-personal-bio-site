@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { getProjects } from '../helpers/data/projectsData';
+import React from 'react';
+import PropTypes from 'prop-types';
+// import { getProjects } from '../helpers/data/projectsData';
 import ProjectUpdateCards from './ProjectUpdateCards';
 import ProjectForm from './ProjectForm';
 
-export default function EditProjects() {
-  const [projects, setProjects] = useState([]);
-  useEffect(() => {
-    getProjects().then((resp) => setProjects(resp));
-  }, []);
-
+function EditProjects({ setProjects, projects }) {
   return (
     <div>
       <div>
@@ -52,3 +48,10 @@ export default function EditProjects() {
           </div>
   );
 }
+
+EditProjects.propTypes = {
+  setProjects: PropTypes.func,
+  projects: PropTypes.array
+};
+
+export default EditProjects;

@@ -4,27 +4,11 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Routes from '../helpers/routes';
 import './App.scss';
+import { getProjects } from '../helpers/data/projectsData';
 
 function App() {
-  // const [user, setUser] = useState(null);
-
-  // useEffect(() => {
-  //   firebase.auth().onAuthStateChanged((authed) => {
-  //     if (authed) {
-  //       const userObj = {
-  //         fullName: authed.displayName,
-  //         profileImage: authed.photoURL,
-  //         uid: authed.uid,
-  //         user: authed.email.split('@')[0]
-  //       };
-  //       setUser(userObj);
-  //     } else if (user || user === null) {
-  //       setUser(false);
-  //     }
-  //   });
-  // }, []);
-
   const [admin, setAdmin] = useState(null);
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((authed) => {
@@ -37,7 +21,9 @@ function App() {
     });
   }, []);
 
-  console.warn(admin);
+  useEffect(() => {
+    getProjects().then((resp) => setProjects(resp));
+  }, []);
 
   return (
     <div className='App'>
@@ -47,6 +33,8 @@ function App() {
         />
         <Routes
         admin={admin}
+        setProjects={setProjects}
+        projects={projects}
         />
       </Router>
     </div>
