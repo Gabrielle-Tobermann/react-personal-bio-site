@@ -1,13 +1,12 @@
 import React from 'react';
-import { Card, CardImg, CardTitle } from 'reactstrap';
+import { Card, CardImg } from 'reactstrap';
 import PropTypes from 'prop-types';
 
-function ProjectCards({ screenshot, title }) {
+function ProjectCards({ screenshot }) {
   return (
-    <div>
-         <Card>
+    <div className="project-cards">
+         <Card className="individual-cards rounded-3">
         <CardImg top width="100%" src={screenshot} alt="Card image cap" />
-        <CardTitle>{title}</CardTitle>
          </Card>
     </div>
   );

@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { getProjects } from '../helpers/data/projectsData';
 import ProjectCards from './ProjectCards';
 
 function Projects({ projects }) {
   return (
-    <div>
+    <div className="projects-view">
       {
         projects.map((item) => (
           <div key={item.firebaseKey}>
             <ProjectCards
             screenshot={item.screenshot}
-            title={item.title}
             />
           </div>
         ))
