@@ -7,6 +7,7 @@ import EditProjects from '../components/EditProjects';
 import Home from '../components/Home';
 import Login from '../components/Login';
 import Technologies from '../components/Technologies';
+import Projects from '../components/Projects';
 
 const PrivateRoute = ({ component: Component, admin, ...rest }) => {
   const routeChecker = (remainder) => (admin
@@ -20,7 +21,7 @@ PrivateRoute.propTypes = {
   component: PropTypes.func,
   admin: PropTypes.bool
 };
-function Routes({ admin }) {
+function Routes({ admin, projects, setProjects }) {
   return (
     <div>
       <Switch>
@@ -28,6 +29,11 @@ function Routes({ admin }) {
         component={Home}/>
         <Route
         exact path='/projects'
+        component={() => <Projects
+        setProjects={setProjects}
+        projects={projects}
+        />
+        }
         />
          <Route
         exact path='/bio'
@@ -43,7 +49,11 @@ function Routes({ admin }) {
         />
         <PrivateRoute
         exact path='/edit-projects'
-        component={EditProjects}
+        component={() => <EditProjects
+        setProjects={setProjects}
+        projects={projects}
+        />
+        }
         admin={admin}
         />
         <Route
@@ -57,7 +67,9 @@ function Routes({ admin }) {
 }
 
 Routes.propTypes = {
-  admin: PropTypes.bool
+  admin: PropTypes.bool,
+  setProjects: PropTypes.func,
+  projects: PropTypes.array
 };
 
 export default Routes;
