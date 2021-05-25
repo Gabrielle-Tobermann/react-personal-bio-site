@@ -20,8 +20,8 @@ const NavBar = ({ admin }) => {
     <div>
       <Navbar className="nav-bar" color="light" light expand="md">
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+        <Collapse className="collapse" isOpen={isOpen} navbar>
+          <Nav className="nav-bar-items" navbar>
             <NavItem>
               <Link className="nav-link" to='/bio'>BIO</Link>
             </NavItem>
