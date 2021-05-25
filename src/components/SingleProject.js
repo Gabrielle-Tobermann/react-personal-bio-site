@@ -6,20 +6,18 @@ function SingleProject() {
   const [projectObj, setProjectObj] = useState({});
   const { firebaseKey } = useParams();
 
-  console.warn('fb', firebaseKey);
-
   useEffect(() => {
     getSingleProject(firebaseKey).then((resp) => {
       setProjectObj(resp);
-      console.warn('resp', resp);
     });
   }, []);
 
-  console.warn(projectObj);
-
   return (
     <div>
-      <h1>{projectObj.title}</h1>
+      <h1>{`${projectObj.title}&output=embed`}</h1>
+      <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}><iframe src={projectObj.loom} frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen="true" style={{
+        position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'
+      }}></iframe></div>
     </div>
   );
 }

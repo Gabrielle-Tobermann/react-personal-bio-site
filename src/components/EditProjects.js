@@ -29,6 +29,7 @@ function EditProjects({ setProjects, projects }) {
                       handleUpdateClick={item.handleUpdateClick}
                       firebaseKey={item.firebaseKey}
                       setProjects={setProjects}
+                      loom={item.loom}
                       />
                     </div>
                     <ProjectForm
@@ -40,6 +41,7 @@ function EditProjects({ setProjects, projects }) {
                     githubUrl={item.githubUrl}
                     technologiesUsed={item.technologiesUsed}
                     firebaseKey={item.firebaseKey}
+                    loom={item.loom}
                     />
                 </div>
                 ))

@@ -13,6 +13,7 @@ function ProjectUpdateCards({
   githubUrl,
   technologiesUsed,
   available,
+  loom,
   firebaseKey,
   setProjects
 }) {
@@ -26,6 +27,7 @@ function ProjectUpdateCards({
         <CardTitle tag="h5">{title}</CardTitle>
         <CardText>{description}</CardText>
         <CardText>{url}</CardText>
+        <CardText>{loom}</CardText>
         <CardText>{githubUrl}</CardText>
         <CardText>{technologiesUsed}</CardText>
         <CardText>{screenshot}</CardText>
@@ -47,7 +49,8 @@ ProjectUpdateCards.propTypes = {
   available: PropTypes.bool,
   technologiesUsed: PropTypes.string,
   firebaseKey: PropTypes.string,
-  setProjects: PropTypes.func
+  setProjects: PropTypes.func,
+  loom: PropTypes.string
 };
 
 export default ProjectUpdateCards;

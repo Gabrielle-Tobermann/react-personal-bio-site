@@ -6,13 +6,14 @@ import {
 import { createProject, updateProject } from '../helpers/data/projectsData';
 
 function ProjectForm({
-  setProjects, title, description, screenshot, url, githubUrl, technologiesUsed, available, firebaseKey
+  setProjects, title, description, screenshot, url, githubUrl, technologiesUsed, available, firebaseKey, loom
 }) {
   const [project, setProject] = useState({
     title: title || '',
     description: description || '',
     screenshot: screenshot || '',
     url: url || '',
+    loom: loom || '',
     githubUrl: githubUrl || '',
     technologiesUsed: technologiesUsed || '',
     available: available || false,
@@ -62,6 +63,10 @@ function ProjectForm({
         <Label for="url">Deployed Link</Label>
         <Input type="url" name="url" id="url" value={project.url} onChange={handleInputChange}/>
       </FormGroup>
+      <FormGroup>
+        <Label for="loom">Loom video</Label>
+        <Input type="url" name="loom" id="url" value={project.loom} onChange={handleInputChange}/>
+      </FormGroup>
       <FormGroup check>
         <Label check>
           <Input name="available" type="checkbox" value={project.available} onChange={handleInputChange}/>
@@ -87,7 +92,8 @@ ProjectForm.propTypes = {
   technologiesUsed: PropTypes.string,
   handleUpdateClick: PropTypes.func,
   handleUpdateChange: PropTypes.func,
-  firebaseKey: PropTypes.string
+  firebaseKey: PropTypes.string,
+  loom: PropTypes.string
 };
 
 export default ProjectForm;
