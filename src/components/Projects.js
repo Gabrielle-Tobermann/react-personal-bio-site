@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ProjectCards from './ProjectCards';
+import { ProjectsView } from '../styles/ProjectsStyle';
 
 function Projects({ projects }) {
   return (
-    <div className="projects-view">
+    <ProjectsView>
       {
         projects.map((item) => (
-          <div key={item.firebaseKey}>
             <ProjectCards
             screenshot={item.screenshot}
+            key={item.firebaseKey}
             />
-          </div>
         ))
       }
-    </div>
+    </ProjectsView>
   );
 }
 

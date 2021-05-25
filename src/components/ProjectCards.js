@@ -1,14 +1,14 @@
 import React from 'react';
-import { Card, CardImg } from 'reactstrap';
 import PropTypes from 'prop-types';
+import { ProjectCard, CardImage, InsideCard } from '../styles/ProjectsStyle';
 
 function ProjectCards({ screenshot }) {
   return (
-    <div className="project-cards">
-         <Card className="individual-cards rounded-3">
-        <CardImg top width="100%" src={screenshot} alt="Card image cap" />
-         </Card>
-    </div>
+    <ProjectCard>
+         <InsideCard>
+        <CardImage top width="100%" src={screenshot} alt="Card image cap" />
+         </InsideCard>
+    </ProjectCard>
   );
 }
 
