@@ -10,6 +10,7 @@ function Projects({ projects }) {
         projects.map((item) => (
             <ProjectCards
             screenshot={item.screenshot}
+            firebaseKey={item.firebaseKey}
             key={item.firebaseKey}
             />
         ))

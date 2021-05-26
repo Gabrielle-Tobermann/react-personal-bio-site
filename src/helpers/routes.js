@@ -8,6 +8,7 @@ import Home from '../components/Home';
 import Login from '../components/Login';
 import Technologies from '../components/Technologies';
 import Projects from '../components/Projects';
+import SingleProject from '../components/SingleProject';
 
 const PrivateRoute = ({ component: Component, admin, ...rest }) => {
   const routeChecker = (remainder) => (admin
@@ -34,6 +35,10 @@ function Routes({ admin, projects, setProjects }) {
         projects={projects}
         />
         }
+        />
+        <Route
+        exact path='/projects/:firebaseKey'
+        component={SingleProject}
         />
          <Route
         exact path='/bio'
