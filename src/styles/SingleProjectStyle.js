@@ -25,8 +25,10 @@ const ProjectTitle = styled.h1`
 `;
 
 const ProjectText = styled.div`
-  font-size: 20px;
-  padding: 1%;
+  font-size: 22px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
 `;
 
 const ProjectLink = styled.a`
