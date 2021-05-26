@@ -14,8 +14,26 @@ const CardImage = styled.img`
   background-color: transparent;
 `;
 
+const HoverText = styled.p`
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  position:relative;
+  bottom: 105px;
+  left:0px;
+  visibility: hidden;
+`;
+
 const InsideCard = styled.div`
   border-radius: 20px;
+  &:hover {
+    ${CardImage} {
+      opacity: 0.3;
+    }
+    ${HoverText} {
+      visibility: visible;
+    }
+  }
 `;
 
 const ProjectsView = styled.div`
@@ -27,5 +45,5 @@ const ProjectsView = styled.div`
 `;
 
 export {
-  ProjectCard, CardImage, ProjectsView, InsideCard
+  ProjectCard, CardImage, ProjectsView, InsideCard, HoverText
 };
