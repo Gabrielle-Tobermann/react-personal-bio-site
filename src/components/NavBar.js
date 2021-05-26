@@ -22,6 +22,9 @@ const NavBar = ({ admin }) => {
         <NavbarToggler onClick={toggle} />
         <Collapse className="collapse" isOpen={isOpen} navbar>
           <Nav className="nav-bar-items" navbar>
+          <NavItem>
+              <Link className="nav-link" to='/'><img style={{ width: '40px', height: 'auto', borderRadius: '2%' }} src="https://user-images.githubusercontent.com/76187279/119601704-5355f200-bdaf-11eb-82db-e9f8b7e5a531.png"/></Link>
+            </NavItem>
             <NavItem>
               <Link className="nav-link" to='/bio'>BIO</Link>
             </NavItem>
