@@ -9,8 +9,11 @@ const InfoContainer = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 40px;
   padding-top: 3%;
+  text-align: left;
+  font-size: 35px;
+  color: #037780;
+  padding-left: 2%;
 `;
 
 const IconContainer = styled.div`

@@ -1,8 +1,13 @@
 import React from 'react';
-import { TechContainer, TechText } from '../styles/TechStyle';
+import Typist from 'react-typist';
+import { TechContainer, TechText, TechTitle } from '../styles/TechStyle';
 
 export default function Technologies() {
   return (
+    <>
+    <Typist cursor={{ show: false }}>
+    <TechTitle>TECHNOLOGIES</TechTitle>
+    </Typist>
     <TechContainer>
        <div>
           <TechText>HTML</TechText>
@@ -22,12 +27,13 @@ export default function Technologies() {
         </div>
         <div>
           <TechText>VS CODE</TechText>
-          <img style={{ width: '70px', height: '70px' }} src="https://user-images.githubusercontent.com/76187279/119756064-9758fd80-be68-11eb-8096-f62b3085fc08.png"/>
+          <img style={{ width: '112px', height: '112px' }} src="https://user-images.githubusercontent.com/76187279/119756064-9758fd80-be68-11eb-8096-f62b3085fc08.png"/>
         </div>
         <div>
           <TechText>REACT</TechText>
           <i className="fab fa-react fa-7x"></i>
         </div>
     </TechContainer>
+    </>
   );
 }
