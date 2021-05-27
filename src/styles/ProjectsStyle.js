@@ -50,7 +50,7 @@ const Title = styled.div`
   padding-top: 3%;
   text-align: left;
   font-size: 35px;
-  color: #e24f47;
+  color: #fa766a;
   padding-left: 2%;
 `;
 

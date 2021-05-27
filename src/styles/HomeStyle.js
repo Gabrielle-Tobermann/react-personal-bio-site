@@ -17,7 +17,7 @@ const Header1 = styled.h1`
 const Header2 = styled.h2`
   font-size: 40px;
   font-family: 'Raleway', sans-serif;
-  color: #e24f47;
+  color: #fa766a;
 
 `;
 

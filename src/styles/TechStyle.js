@@ -20,7 +20,7 @@ const TechTitle = styled.div`
   text-align: left;
   padding-top: 3%;
   font-size: 35px;
-  color: #e24f47;
+  color: #fa766a;
   padding-left: 2%;
 `;
 

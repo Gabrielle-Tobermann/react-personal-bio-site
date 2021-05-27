@@ -22,6 +22,7 @@ const ProjectTitle = styled.h1`
   font-size: 40px;
   padding-top: 3%;
   padding-bottom: 1%;
+  color: #fa766a;
 `;
 
 const ProjectText = styled.div`

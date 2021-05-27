@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const AboutMe = styled.div`
-  color: #e24f47;
+  color: #fa766a;
   text-align: left;
   font-size: 35px;
   padding-top: 3%;
@@ -30,6 +30,7 @@ const BioPic = styled.img`
   width: 350px;
   height: auto;
   border-radius: 50%;
+  margin-top: 8%;
 `;
 export {
   AboutMe, BioTitle, BioView, BioParagraph, BioPic

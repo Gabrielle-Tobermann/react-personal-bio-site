@@ -18,8 +18,8 @@ export default function Contact() {
         </IconContainer>
         <InfoContainer>
           <Info>gabrielle.tobermann@gmail.com</Info>
-          <Info>https://www.linkedin.com/in/gabrielle-tobermann-347878153/</Info>
-          <Info>https://github.com/Gabrielle-Tobermann</Info>
+          <Info href="https://www.linkedin.com/in/gabrielle-tobermann-347878153/">https://www.linkedin.com/in/gabrielle-tobermann-347878153/</Info>
+          <Info href="https://github.com/Gabrielle-Tobermann">https://github.com/Gabrielle-Tobermann</Info>
         </InfoContainer>
        </WholeContainer>
     </div>

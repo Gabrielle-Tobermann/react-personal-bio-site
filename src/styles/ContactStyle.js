@@ -12,7 +12,7 @@ const Title = styled.div`
   padding-top: 3%;
   text-align: left;
   font-size: 35px;
-  color: #e24f47;
+  color: #fa766a;
   padding-left: 2%;
 `;
 
@@ -22,7 +22,7 @@ const IconContainer = styled.div`
   width: 15%;
 `;
 
-const Info = styled.div`
+const Info = styled.a`
   font-size: 25px;
   color: #037780;
   font-weight: bold;
