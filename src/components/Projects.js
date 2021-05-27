@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Typist from 'react-typist';
 import ProjectCards from './ProjectCards';
-import { ProjectsView } from '../styles/ProjectsStyle';
+import { ProjectsView, Title } from '../styles/ProjectsStyle';
 
 function Projects({ projects }) {
   return (
+    <div>
+    <Typist cursor={{ show: false }}>
+    <Title>PROJECTS</Title>
+    </Typist>
     <ProjectsView>
       {
         projects.map((item) => (
@@ -16,6 +21,7 @@ function Projects({ projects }) {
         ))
       }
     </ProjectsView>
+    </div>
   );
 }
 

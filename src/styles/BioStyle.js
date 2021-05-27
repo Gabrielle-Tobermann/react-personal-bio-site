@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 const AboutMe = styled.div`
-  color: #037780;
+  color: #e24f47;
   text-align: left;
   font-size: 35px;
-  padding-left: 2%;
-  padding-top: 4%;
+  padding-top: 3%;
   padding-bottom: 3%;
   width: fit-content;
 `;
@@ -18,8 +17,6 @@ const BioTitle = styled.div`
 const BioView = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
   justify-content: space-around;
   height: 100%;
 `;

@@ -4,7 +4,7 @@ import { TechContainer, TechText, TechTitle } from '../styles/TechStyle';
 
 export default function Technologies() {
   return (
-    <>
+    <div>
     <Typist cursor={{ show: false }}>
     <TechTitle>TECHNOLOGIES</TechTitle>
     </Typist>
@@ -16,6 +16,10 @@ export default function Technologies() {
         <div>
           <TechText>JAVASCRIPT</TechText>
           <i className="fab fa-js fa-7x"></i>
+        </div>
+        <div>
+          <TechText>SASS</TechText>
+          <i className="fab fa-sass fa-7x"></i>
         </div>
         <div>
           <TechText>GIT</TechText>
@@ -33,7 +37,11 @@ export default function Technologies() {
           <TechText>REACT</TechText>
           <i className="fab fa-react fa-7x"></i>
         </div>
+        <div>
+          <TechText>FIREBASE</TechText>
+          <img style={{ width: '112px', height: '112px' }} src="https://user-images.githubusercontent.com/76187279/119869284-a8941f80-bee5-11eb-8586-87d660c50c0a.png"/>
+        </div>
     </TechContainer>
-    </>
+    </div>
   );
 }

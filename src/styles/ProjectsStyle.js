@@ -37,13 +37,23 @@ const InsideCard = styled.div`
 `;
 
 const ProjectsView = styled.div`
-  height: 92vh;
+  height: calc(92vh - 95px);
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 8%;
+  margin-top: 3%;
+  margin-left: 8%;
+  margin-right: 8%;
+`;
+
+const Title = styled.div`
+  padding-top: 3%;
+  text-align: left;
+  font-size: 35px;
+  color: #e24f47;
+  padding-left: 2%;
 `;
 
 export {
-  ProjectCard, CardImage, ProjectsView, InsideCard, HoverText
+  ProjectCard, CardImage, ProjectsView, InsideCard, HoverText, Title
 };

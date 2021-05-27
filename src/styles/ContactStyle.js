@@ -12,7 +12,7 @@ const Title = styled.div`
   padding-top: 3%;
   text-align: left;
   font-size: 35px;
-  color: #037780;
+  color: #e24f47;
   padding-left: 2%;
 `;
 

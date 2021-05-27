@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 const TechContainer = styled.div`
   display: flex;
-  height: 78vh;
   justify-content: space-between;
   align-items: center;
   padding-right: 7%;
   padding-left: 7%;
+  height: calc(92vh - 91px);
 `;
 
 const TechText = styled.div`
@@ -20,8 +20,10 @@ const TechTitle = styled.div`
   text-align: left;
   padding-top: 3%;
   font-size: 35px;
-  color: #037780;
+  color: #e24f47;
   padding-left: 2%;
 `;
 
-export { TechContainer, TechText, TechTitle };
+export {
+  TechContainer, TechText, TechTitle
+};
