@@ -14,7 +14,6 @@ function App() {
     firebase.auth().onAuthStateChanged((authed) => {
       if (authed && (authed.uid === process.env.REACT_APP_ADMIN_UID)) {
         setAdmin(true);
-        console.warn('signed in');
       } else if (admin || admin === null) {
         setAdmin(false);
       }

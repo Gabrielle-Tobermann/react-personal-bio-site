@@ -1,28 +1,47 @@
 import React from 'react';
+import Typist from 'react-typist';
+import { TechContainer, TechText, TechTitle } from '../styles/TechStyle';
 
 export default function Technologies() {
   return (
     <div>
+    <Typist cursor={{ show: false }}>
+    <TechTitle>TECHNOLOGIES</TechTitle>
+    </Typist>
+    <TechContainer>
        <div>
-          <p>HTML</p>
-          <i className="fab fa-html5 fa-5x"></i>
+          <TechText>HTML</TechText>
+          <i className="fab fa-html5 fa-7x"></i>
         </div>
         <div>
-          <p>JAVASCRIPT</p>
-          <i className="fab fa-js fa-5x"></i>
+          <TechText>JAVASCRIPT</TechText>
+          <i className="fab fa-js fa-7x"></i>
         </div>
         <div>
-          <p>GIT</p>
-          <img src="https://user-images.githubusercontent.com/76187279/119210487-ee7a5f00-ba71-11eb-9794-89ce77d996be.png" alt="git icon"/>
+          <TechText>SASS</TechText>
+          <i className="fab fa-sass fa-7x"></i>
         </div>
         <div>
-          <p>GITHUB</p>
-          <i className="fab fa-github fa-5x"></i>
+          <TechText>GIT</TechText>
+          <i className="fab fa-git-alt fa-7x"></i>
         </div>
         <div>
-          <p>VS CODE</p>
-          <img src="https://user-images.githubusercontent.com/76187279/119210485-ec180500-ba71-11eb-8631-0a3493bb66f8.png" alt="VS Code icon"/>
+          <TechText>GITHUB</TechText>
+          <i className="fab fa-github fa-7x"></i>
         </div>
+        <div>
+          <TechText>VS CODE</TechText>
+          <img style={{ width: '112px', height: '112px' }} src="https://user-images.githubusercontent.com/76187279/119756064-9758fd80-be68-11eb-8096-f62b3085fc08.png"/>
+        </div>
+        <div>
+          <TechText>REACT</TechText>
+          <i className="fab fa-react fa-7x"></i>
+        </div>
+        <div>
+          <TechText>FIREBASE</TechText>
+          <img style={{ width: '112px', height: '112px' }} src="https://user-images.githubusercontent.com/76187279/119869284-a8941f80-bee5-11eb-8586-87d660c50c0a.png"/>
+        </div>
+    </TechContainer>
     </div>
   );
 }

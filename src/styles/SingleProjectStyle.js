@@ -6,6 +6,12 @@ const ProjectContainer = styled.div`
   justify-content: center;
 `;
 
+const VidContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const LoomVideo = styled.div`
   width: 35%;
   height: auto;
@@ -16,33 +22,40 @@ const ProjectTitle = styled.h1`
   font-size: 40px;
   padding-top: 3%;
   padding-bottom: 1%;
+  color: #fa766a;
 `;
 
 const ProjectText = styled.div`
-  font-size: 20px;
-  color: #700370;
-  padding: 1%;
+  font-size: 22px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
 `;
 
 const ProjectLink = styled.a`
   font-size: 20px;
-  color: #700370;
   padding: 1%;
+  color: #037780;
 `;
 
 const LinkTitle = styled.div`
-  color: #700370;
+  color: black;
   padding: 1% 0;
-  font-style: italic
 `;
 
 const Tech = styled.div`
   font-size: 24px;
   font-weight: bold;
-  color: #023c40;
   padding-top: 1%;
+  width: 33.3%;
+`;
+
+const TechItems = styled.div`
+  text-align: left;
+  padding-left: 10%;
+  color: #037780;
 `;
 
 export {
-  LoomVideo, ProjectTitle, ProjectContainer, ProjectText, Tech, ProjectLink, LinkTitle
+  LoomVideo, ProjectTitle, ProjectContainer, ProjectText, Tech, ProjectLink, LinkTitle, VidContainer, TechItems
 };

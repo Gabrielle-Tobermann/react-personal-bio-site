@@ -14,18 +14,46 @@ const CardImage = styled.img`
   background-color: transparent;
 `;
 
+const HoverText = styled.p`
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  position:relative;
+  bottom: 105px;
+  left:0px;
+  visibility: hidden;
+`;
+
 const InsideCard = styled.div`
   border-radius: 20px;
+  &:hover {
+    ${CardImage} {
+      opacity: 0.3;
+    }
+    ${HoverText} {
+      visibility: visible;
+    }
+  }
 `;
 
 const ProjectsView = styled.div`
-  height: 92vh;
+  height: calc(92vh - 95px);
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 8%;
+  margin-top: 3%;
+  margin-left: 8%;
+  margin-right: 8%;
+`;
+
+const Title = styled.div`
+  padding-top: 3%;
+  text-align: left;
+  font-size: 35px;
+  color: #fa766a;
+  padding-left: 2%;
 `;
 
 export {
-  ProjectCard, CardImage, ProjectsView, InsideCard
+  ProjectCard, CardImage, ProjectsView, InsideCard, HoverText, Title
 };
