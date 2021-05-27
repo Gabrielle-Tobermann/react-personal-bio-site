@@ -26,6 +26,9 @@ const Info = styled.a`
   font-size: 25px;
   color: #037780;
   font-weight: bold;
+  &:hover {
+    color: #fa766a;
+  }
 `;
 
 const WholeContainer = styled.div`
