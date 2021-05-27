@@ -12,6 +12,8 @@ const AboutMe = styled.div`
 const BioTitle = styled.div`
   width: 55%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 const BioView = styled.div`
@@ -23,7 +25,7 @@ const BioView = styled.div`
 
 const BioParagraph = styled.div`
   font-size: 24px;
-  padding-top: 10%;
+  align-self: center;
 `;
 
 const BioPic = styled.img`
