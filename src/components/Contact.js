@@ -11,7 +11,7 @@ export default function Contact() {
 
   const toggle = () => setTooltipOpen(!tooltipOpen);
   return (
-    <div>
+    <div style={{ height: 'calc(92vh - 40px)' }}>
       <Typist cursor={{ show: false }}>
        <Title>CONTACT ME</Title>
       </Typist>

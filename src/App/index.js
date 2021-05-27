@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar';
 import Routes from '../helpers/routes';
 import './App.scss';
 import { getProjects } from '../helpers/data/projectsData';
+import Footer from '../components/Footer';
 
 function App() {
   const [admin, setAdmin] = useState(null);
@@ -35,6 +36,7 @@ function App() {
         setProjects={setProjects}
         projects={projects}
         />
+        <Footer/>
       </Router>
     </div>
   );

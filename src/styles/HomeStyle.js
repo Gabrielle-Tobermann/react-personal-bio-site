@@ -5,7 +5,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-height: 92vh;
+height: calc(92vh - 40px);
 `;
 
 const Header1 = styled.h1`

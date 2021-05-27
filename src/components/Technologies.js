@@ -4,7 +4,7 @@ import { TechContainer, TechText, TechTitle } from '../styles/TechStyle';
 
 export default function Technologies() {
   return (
-    <div style={{ height: '92vh' }}>
+    <div style={{ height: 'calc(92vh - 40px)' }}>
     <Typist cursor={{ show: false }}>
     <TechTitle>TECHNOLOGIES</TechTitle>
     </Typist>

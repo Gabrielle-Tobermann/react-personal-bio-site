@@ -6,7 +6,7 @@ import { ProjectsView, Title } from '../styles/ProjectsStyle';
 
 function Projects({ projects }) {
   return (
-    <div style={{ height: '92vh' }}>
+    <div style={{ height: 'calc(92vh - 40px)' }}>
     <Typist cursor={{ show: false }}>
     <Title>PROJECTS</Title>
     </Typist>
