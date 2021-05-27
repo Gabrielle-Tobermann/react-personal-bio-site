@@ -6,7 +6,7 @@ const TechContainer = styled.div`
   align-items: center;
   padding-right: 7%;
   padding-left: 7%;
-  height: calc(92vh - 91px);
+  margin-top: 25vh;
 `;
 
 const TechText = styled.div`

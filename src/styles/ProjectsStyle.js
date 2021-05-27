@@ -37,10 +37,10 @@ const InsideCard = styled.div`
 `;
 
 const ProjectsView = styled.div`
-  height: calc(92vh - 95px);
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  align-items: center;
   margin-top: 3%;
   margin-left: 8%;
   margin-right: 8%;
