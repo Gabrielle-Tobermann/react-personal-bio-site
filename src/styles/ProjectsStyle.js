@@ -44,6 +44,7 @@ const ProjectsView = styled.div`
   margin-top: 3%;
   margin-left: 8%;
   margin-right: 8%;
+  height: calc(92vh - 96px);
 `;
 
 const Title = styled.div`
