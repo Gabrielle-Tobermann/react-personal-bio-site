@@ -4,6 +4,7 @@ const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: calc(92vh - 40px);
 `;
 
 const VidContainer = styled.div`
@@ -20,7 +21,6 @@ const LoomVideo = styled.div`
 
 const ProjectTitle = styled.h1`
   font-size: 40px;
-  padding-top: 3%;
   padding-bottom: 1%;
   color: #fa766a;
 `;
