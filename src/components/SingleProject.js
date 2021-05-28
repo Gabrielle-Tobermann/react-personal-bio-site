@@ -16,8 +16,9 @@ function SingleProject() {
   }, []);
 
   return (
+    <div style={{ height: 'calc(92vh - 40px' }}>
+    <ProjectTitle>{projectObj.title}</ProjectTitle>
     <ProjectContainer>
-      <ProjectTitle>{projectObj.title}</ProjectTitle>
       <ProjectText>{projectObj.description}</ProjectText>
       <VidContainer>
         <Tech>
@@ -42,6 +43,7 @@ function SingleProject() {
       }</Tech>
       </VidContainer>
     </ProjectContainer>
+    </div>
   );
 }
 
