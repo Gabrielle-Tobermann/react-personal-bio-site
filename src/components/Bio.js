@@ -8,10 +8,10 @@ export default function Bio() {
   return (
     <div className="whole-bio-view">
       <BioView>
-        <BioTitle>
           <Typist cursor={{ show: false }}>
             <AboutMe>ABOUT ME</AboutMe>
           </Typist>
+        <BioTitle>
             <BioParagraph>I was born and raised in a small town in France. Being both French and
               American, I decided to move to the United States when I turned 18. I love
               music and grew up learning violin. So, upon my arrival in Tennessee, I
@@ -22,8 +22,8 @@ export default function Bio() {
               and programmer was a perfect combination. Both fields are challenging,
               require constant learning, and are extremely rewarding. I am now attending
               Nashville Software School to become a full-stack software developer.</BioParagraph>
-          </BioTitle>
           <BioPic src="https://user-images.githubusercontent.com/76187279/119419861-b026af00-bcc0-11eb-8e27-6b17ed4d5220.jpg"/>
+          </BioTitle>
       </BioView>
     </div>
   );
