@@ -1,38 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import '../styles/variables';
+
 .App {
   text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.violin-image {
+  height: 140px;
+  width: 140px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-bar {
+  height: 8vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-nav {
+  width: 100%;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  font-weight: bolder;
+  color: #fa766a !important;
+}
+
+.home-name {
+  font-size: 45px;
+}
+
+.home-title {
+  font-size: 38px;
+}
+
+.bio-view {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  justify-content: space-around;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.bio-picture {
+  width: 350px;
+  height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bio {
+  color: $light-red-color;
+  font-size: 24px;
+  padding-top: 10%;
+}
+
+.about-me {
+  text-align: left;
+  font-size: 35px;
+  padding-left: 2%;
+  padding-top: 4%;
+  padding-bottom: 3%;
+  width: fit-content;
+  color: $light-red-color;
+}
+
+.bio-title {
+  width: 55%;
+  height: 100%;
+}
+
+.icon {
+  width: 140px;
+  height: 140px;
 }
