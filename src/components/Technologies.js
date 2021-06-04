@@ -41,6 +41,10 @@ export default function Technologies() {
           <TechText>FIREBASE</TechText>
           <img style={{ width: '112px', height: '112px' }} src="https://user-images.githubusercontent.com/76187279/119869284-a8941f80-bee5-11eb-8586-87d660c50c0a.png"/>
         </div>
+        <div>
+        <TechText>POSTMAN</TechText>
+          <img style={{ width: '112px', height: '112px' }} src="https://user-images.githubusercontent.com/76187279/120837264-1c5caa80-c52c-11eb-8f80-1243285d3cb3.png"/>
+        </div>
     </TechContainer>
     </div>
   );
