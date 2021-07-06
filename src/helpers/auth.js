@@ -1,4 +1,3 @@
-// src/helpers/auth.js
 import firebase from 'firebase';
 
 const signInUser = () => {

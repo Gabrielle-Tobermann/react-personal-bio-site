@@ -12,16 +12,7 @@ export default function Bio() {
             <AboutMe>ABOUT ME</AboutMe>
           </Typist>
         <BioTitle>
-            <BioParagraph>I was born and raised in a small town in France. Being both French and
-              American, I decided to move to the United States when I turned 18. I love
-              music and grew up learning violin. So, upon my arrival in Tennessee, I
-              attended Middle Tennessee State University and graduated with a Bachelor
-              of music with an out-of-state violin scholarship. I discovered programming
-              through a friend, during my time at MTSU. My interest in coding kept
-              growing as I was learning more about it. I realized that being a musician
-              and programmer was a perfect combination. Both fields are challenging,
-              require constant learning, and are extremely rewarding. I am now attending
-              Nashville Software School to become a full-stack software developer.</BioParagraph>
+            <BioParagraph> I am  currently attending Nashville Software School in the full-stack developer program. A French native, I started out life as a musician, beginning classical training on the violin at a young age. Upon graduating high school in France, I decided to move to the United States to continue my violin studies at Middle Tennessee State University. While at MTSU, a friend introduced me to programming, and I began learning various aspects on my own. I find the world of programming to be very exciting and I look forward to many challenging projects to come.</BioParagraph>
           <BioPic src="https://user-images.githubusercontent.com/76187279/119419861-b026af00-bcc0-11eb-8e27-6b17ed4d5220.jpg"/>
           </BioTitle>
       </BioView>
